@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link href="http://192.168.0.180/Tesis/mapa/styles/style.css" type="text/css" rel="stylesheet"> 
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCDL6q3JnBIQc8Hi8zemTD_gH2VHprKOgk&sensor=true"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	<script src="http://192.168.0.180:8080/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/directions/output?alternatives=true"></script>
+	<script type="text/javascript" src="http://192.168.0.180/Tesis/mapa//js/scripts.js"></script>
+	<script type="text/javascript" src="http://192.168.0.180/Tesis/mapa/js/nav.js"></script>
+	
+	
+</head>
+<body onload="initialize();">
+	<div id="map_canvas"></div>
+	<div id="alertas" style="display:none;"><div id="alerts_header"></div><div id="alerts_body"></div></div>
+	<nav class="clearfix">
+		<ul class="clearfix">
+			<li><div id="gps"><a href="#" onClick="gps(true)">Gps</a></div></li>
+			<li><div id="indicaciones"><a href="#" onClick="router(true,null,true)">Indicaciones</a></li>
+			<li><div id="notificaciones"><a href="#" onClick="notificaciones(true)">Notificaciones</a></li>
+			<li><div id="compartir"><a href="#" onClick="add_event(true)">Compartir</a></li>
+			<li><div id="eventos"><a href="#" onClick="eventos(true)">Eventos</a></li>
+			<li><div id="destinos"><a href="#" onClick="ver_destinos(true)">Destinos</a></li>
+		</ul>
+		<a href="#" id="pull">Menu</a>
+	</nav>
+</body>
+</html>
